@@ -109,6 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.SalesPredictionEnv/
 
 # Spyder project settings
 .spyderproject
