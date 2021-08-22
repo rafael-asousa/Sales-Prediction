@@ -1,2 +1,2 @@
 # Sales-Prediction
-Portfolio project for the prediction of sales of a drug store.
+Portfolio project for the prediction of multiple drug stores.
