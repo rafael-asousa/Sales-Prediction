@@ -3,12 +3,12 @@ import json
 import pandas as pd
 import os
 from flask import Flask, request, Response
+import dotenv
+
+dotenv.load_dotenv( dotenv.find_dotenv())
 
 # constants
-token = '1929459281:AAHeyV-oGTIFci2ezK8uELRpKpE3xVtdmkk'
-
-#set webhook commnad
-#https://api.telegram.org/bot1929459281:AAHeyV-oGTIFci2ezK8uELRpKpE3xVtdmkk/setWebhook?url=https://cdc04cda65be30.localhost.run
+token = os.getenv( token )
 
 
 def send_message( chat_id, text ):
