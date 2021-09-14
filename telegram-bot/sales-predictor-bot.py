@@ -36,19 +36,22 @@ def parse_message( message ):
 
 def load_dataset( store_id ):
     
-    dfx = pd.read_csv('../data/test.csv')
-    df_raw_store = pd.read_csv('../data/store.csv', low_memory=False)
+    dfx = pd.read_csv('./test.csv')
+    df_raw_store = pd.read_csv('./store.csv', low_memory=False)
     dfx_complete = pd.merge(df_raw_store, dfx, how='left', on='Store')
     
-    api_test_data = dfx_complete[dfx_complete['Store'] == store_id ]
-    
+    api_test_data = dfx_complete[dfx_complete['Store'] == int( store_id ) ]
+      
     if not api_test_data.empty:
     
         api_test_data = api_test_data[api_test_data['Open'] != 0]
         api_test_data = api_test_data[~api_test_data['Open'].isnull()] #there are some NaN in Open column to get rid off
         api_test_data = api_test_data.drop('Id', axis=1)
-
-        data_to_api = json.dumps( api_test_data.to_dict( orient='records' ) )
+        
+        if api_test_data.empty:
+            return 'error'
+        else:
+            data_to_api = json.dumps( api_test_data.to_dict( orient='records' ) )        
 
     else:
         data_to_api = 'error'
@@ -56,7 +59,8 @@ def load_dataset( store_id ):
     return data_to_api
 
 def predict( data ):
-    r = requests.post( 'https://rafael-sales-predictor.herokuapp.com/sales_prediction/predict', data=data, headers={'Content-type': 'application/json' } )
+    
+    r = requests.post( 'https://rafael-sales-predictor.herokuapp.com/sales_prediction/predict', data=data, headers={'Content-type': 'application/json' } )    
     df = pd.DataFrame(r.json(), columns=r.json()[0].keys())
     
     return df

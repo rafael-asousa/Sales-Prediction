@@ -36,7 +36,7 @@ def predict_sales():
         return df_response
     
     else:
-        return Reponse( '{}', status=200, mimetype='application/json' )
+        return Response( '{}', status=200, mimetype='application/json' )
     
 
     
