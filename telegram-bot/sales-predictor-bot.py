@@ -105,7 +105,7 @@ def index():
 
 
     else:
-        return '<h1> Rossmann Telegram BOT </h1>'
+        return '<h1> Sales Prediction Telegram BOT </h1>'
     
 
 
