@@ -5,10 +5,10 @@ import os
 from flask import Flask, request, Response
 import dotenv
 
-dotenv.load_dotenv( dotenv.find_dotenv())
+dotenv.load_dotenv( dotenv.find_dotenv() )
 
 # constants
-token = os.getenv( token )
+token = os.getenv( 'token' )
 
 
 def send_message( chat_id, text ):
