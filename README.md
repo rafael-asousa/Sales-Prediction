@@ -17,28 +17,28 @@ The core idea for the solution strategy is to train a regression algorithm to ac
 
 ### Part 1: Understanding the Data.
 
-<b>Step 1:</b> Describe the data in size, columns, etc. Deal with NaN values. Use basic concepts of descriptive statistics, identify basic behavior of values and outliars, etc. 
-<b>Step 2:</b> Construct a set of hypothesis of features that should affect our sales and make a feature enginnering in order to be able to check the hypothesis.
-<b>Step 3:</b> Filter data to avoid data leakage and unuseful data.
+<b>Step 1:</b> Describe the data in size, columns, etc. Deal with NaN values. Use basic concepts of descriptive statistics, identify basic behavior of values and outliars, etc. \\
+<b>Step 2:</b> Construct a set of hypothesis of features that should affect our sales and make a feature enginnering in order to be able to check the hypothesis.\\
+<b>Step 3:</b> Filter data to avoid data leakage and unuseful data.\\
 <b>Step 4:</b> Make a Exploratory Data Analysis (EDA) in order to validate the hypothesis constructed in <b>Step 2</b> to gain understanding about the business.
 
 ### Part 2: Treat the data.
 
-<b>Step 1:</b> Rescale, normalization, transformation and encoding of the data to increase the models capability of learning from our dataset.
+<b>Step 1:</b> Rescale, normalization, transformation and encoding of the data to increase the models capability of learning from our dataset.\\
 <b>Step 2:</b> Feature selection using an algorithm (Boruta) and knowledge obtained from EDA.
 
 
 ### Part 3: Create and evaluate a Machine Learning Model.
 
-<b>Step 1:</b> Define a baseline model to be compared to the trained algorithms. 
-<b>Step 2:</b> Select a bunch of ML algorithms to evaluate the performance.
-<b>Step 3:</b> Choose and validate the model that will be used based on characteristics like cross validation performance, deploy cost, value added to business, etc.
-<b>Step 4:</b> Perform a Fine Tuning search for model hyperparameters
+<b>Step 1:</b> Define a baseline model to be compared to the trained algorithms. \\
+<b>Step 2:</b> Select a bunch of ML algorithms to evaluate the performance.\\
+<b>Step 3:</b> Choose and validate the model that will be used based on characteristics like cross validation performance, deploy cost, value added to business, etc.\\
+<b>Step 4:</b> Perform a Fine Tuning search for model hyperparameters.\\
 <b>Step 5:</b> Evaluate the model's performance in terms of business metrics and how it affects business decisions.
 
 ### Part 4: Deploy the model.
 
-<b>Step 1:</b> An API was constructed in order to access the predictions for a given store.
+<b>Step 1:</b> An API was constructed in order to access the predictions for a given store.\\
 <b>Step 2:</b> A telegram bot was constructed in order to allow the predictions to be accessible from a smartphone from anywhere in the world.
 
 # 4. Top 3 Data Insights
