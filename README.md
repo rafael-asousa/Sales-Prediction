@@ -67,7 +67,7 @@ Those are the predictions summed for the total sales of all stores in next six w
 
 # 8. Conclusions
 
-A machine learning model was developed in order to predict the sales from multiple drug stores. With the use of XGBoost model it was possible to predict the sales from said stores for the next six weeks, with an estimated error of +/- 15%, in R$ 278,809,600.00. 
+A machine learning model was developed in order to predict the sales from multiple drug stores. With the use of XGBoost model it was possible to predict the sales from said stores for the next six weeks, with an estimated error of +/- 15%, in R$ 278,809,600.00. If you want to access prediction for any given store you can click <a href="https://telegram.me/SalesPredictorBot">here</a> and be redirected to the telegram bot chat.
 
 # 9. Lessons Learned
 
