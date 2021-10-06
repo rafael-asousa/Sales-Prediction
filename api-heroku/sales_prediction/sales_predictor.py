@@ -98,14 +98,14 @@ class sales_prediction():
         
     def preparation(self, df):
         
-        df['competition_distance'] =   self.competition_distance_scale.fit_transform( df[['competition_distance']].values )
-        df['competition_open_since'] = self.competition_open_since_scale.fit_transform( df[['competition_open_since']].values )
-        df['year'] =                   self.year_scale.fit_transform( df[['year']].values )
-        df['promo2_since_in_week'] =   self.promo2_since_in_week_scale.fit_transform( df[['promo2_since_in_week']].values )
+        df['competition_distance'] =   self.competition_distance_scale.transform( df[['competition_distance']].values )
+        df['competition_open_since'] = self.competition_open_since_scale.transform( df[['competition_open_since']].values )
+        df['year'] =                   self.year_scale.transform( df[['year']].values )
+        df['promo2_since_in_week'] =   self.promo2_since_in_week_scale.transform( df[['promo2_since_in_week']].values )
         
         df = pd.get_dummies( df, prefix=['state_holiday'], columns=['state_holiday'] )
 
-        df['store_type'] = self.store_type_encoder.fit_transform( df['store_type'] )
+        df['store_type'] = self.store_type_encoder.transform( df['store_type'] )
 
         assortment_dict = {'basic': 1,  'extended': 2, 'extra': 3}
         df['assortment'] = df['assortment'].map( assortment_dict )
